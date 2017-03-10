@@ -1,0 +1,18 @@
+module.exports = {
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  apps : [
+    {
+      name      : "Bot",
+      script    : "bot.js",
+      env: {
+        ALLOWED_USERS: 'userid1 userid2',
+        ALLOWED_BOTS: 'botid1',
+        TOKEN: 'slack_token',
+        DEBUG: 'true or false'
+      }
+    }
+  ]
+}

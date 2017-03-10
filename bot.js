@@ -17,7 +17,7 @@ var controller = botkit.slackbot({
 });
 
 controller.spawn({
-  token: process.env.token
+  token: process.env.TOKEN
 }).startRTM(function(err) {
   if (err) {
     throw new Error(err);
@@ -53,8 +53,8 @@ controller.hears([':flag-([a-z]{2}):'], ['ambient', 'direct_message', 'direct_me
 function validatesAllowed(message) {
   var hasUserFilter = allowedUsers.length;
   var hasBotFilter = allowedBots.length;
-  var userAllowed = !hasUserFilter || allowedUsers.includes(message.user)
-  var botAllowed = !hasBotFilter || allowedBots.includes(message.bot_id)
+  var userAllowed = !hasUserFilter || allowedUsers.includes(message.user);
+  var botAllowed = !hasBotFilter || allowedBots.includes(message.bot_id);
 
   return userAllowed || botAllowed;
 }
