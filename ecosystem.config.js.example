@@ -5,7 +5,7 @@ module.exports = {
    */
   apps : [
     {
-      name      : "Bot",
+      name      : "AnthemBOT",
       script    : "bot.js",
       env: {
         ALLOWED_USERS: 'userid1 userid2',
